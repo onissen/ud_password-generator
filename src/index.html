@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <!-- Metadaten -->
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Titel -->
     <title>Tutorial Environment</title>
-
-    <!-- SASS Import -->
     <link rel="stylesheet" href="./css/main.min.css">
-
-    <!-- Font Import (Google Font) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
 
-</head>
+  <body>
+    <div class="wrapper">
+      <div class="password" id="password">
 
-<body>
+      </div>
 
-    <!-- Content aus dem Tutorial: START -->
+      <div class="controls" id="controlBox">
+        <form id="controls">
 
-    <!-- Content aus dem Tutorial: END -->
+          <!--Letters-->
+          <label for="letters" class="toggle">
+            Buchstaben
+            <input type="checkbox" name="letters" id="letters" value="letters" checked="true">
+            <span class="roundButton"></span>
+          </label>
 
-</body>
+          <!--Numbers-->
+          <label for="numbers" class="toggle">
+            Nummern
+            <input type="checkbox" name="numbers" id="numbers" value="numbers" checked="true">
+            <span class="roundButton"></span>
+          </label>
 
-<!-- JS Import -->
-<script src="./js/main.bundle.js"></script>
+          <!--Sonderzeichen-->
+          <label for="specialCharacters" class="toggle">
+            Sonderzeichen
+            <input type="checkbox" name="specialCharacters" id="specialCharacters" value="specialCharacters" checked="true">
+            <span class="roundButton"></span>
+          </label>
 
+          <!--Häufig gesperrte Sonderzeichen-->
+          <label for="lockedSpecialCharacters" class="toggle">
+            Häufig gesperrte Sonderzeichen
+            <input type="checkbox" name="lockedSpecialCharacters" id="lockedSpecialCharacters" value="lockedSpecialCharacters">
+            <span class="roundButton"></span>
+          </label>
+
+          <input type="range" min="8" max="60" value="45" name="length" id="length">
+
+          <div class="length-value">
+            <span>Länge</span>
+            <span id="length-value">45</span>
+          </div>
+
+          <button type="submit">Passwort Generieren</button>
+
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="./js/main.bundle.js"></script>
 </html>
