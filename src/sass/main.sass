@@ -69,3 +69,47 @@
         margin-top: -0.5rem
         border-radius: 50%
         cursor: grab
+
+    .toggle
+      margin: 0 0 2rem 0
+      padding: 0 0 0 6rem
+      position: relative
+      display: inline-block
+      width: 100%
+      color: white
+      font-size: 1.6rem
+      cursor: pointer
+
+      input
+        display: none
+
+        &:checked + .roundButton
+          background-color: $prime
+
+        &:checked + .roundButton:before
+          transform: translate(1.7rem, 0)
+
+      .roundButton
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 4rem
+        height: 2.2rem
+        background-color: $secondLight
+        display: block
+        transition: all 0.3s
+        border-radius: 3.4rem
+        cursor: pointer
+
+        &:before
+          position: absolute
+          left: 0.25rem
+          bottom: 0.4rem
+          height: 1.4rem
+          width: 1.4rem
+          background-color: white
+          content: ""
+          border-radius: 100%
+          transition: all 0.3s
