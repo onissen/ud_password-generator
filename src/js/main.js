@@ -1,6 +1,2 @@
-
-function add(a, b) {
-    return a + b;
-}
-
-module.exports = add;
+/*jshint esversion: 6 */
+import { PasswordGenerator } from './generatepassword';
